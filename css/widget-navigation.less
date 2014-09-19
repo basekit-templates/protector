@@ -102,24 +102,17 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 			}
 		}
 
-		&.selected .text {
+		&.selected > a > .text {
 			background: @color-swatch6;
 			color: darken(@color-swatch1, 10%);
 
-			@media @tablet {
-				// background-color: transparent;
-				// color: darken(@color-swatch6, 40%);
-				// border: none;
-				// border-bottom: 1px solid darken(@color-swatch1, 7%);
+			&:after {
+				border-color: darken(@color-swatch1, 10%) transparent transparent transparent;
 			}
 
-			&:before {
-				background-color: lighten(@color-swatch6, 12%);
-
-			}
 			&:hover {
-				color: lighten(@color-swatch2, 2%);
-				background: lighten(@color-swatch6, 3%);
+				color: darken(@color-swatch1, 10%);
+				background: @color-swatch6;
 			}
 		}
 
@@ -139,22 +132,19 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 		-moz-transition: background-color 0.25s ease-in-out;
 		-o-transition: background-color 0.25s ease-in-out;
 		transition: background-color 0.25s ease-in-out;
-		margin-right: 0;
-
-		// hovered folder item
-		&:hover {
-			color: @color-swatch6;
-
-			@media @tablet {
-				background-color: lighten(@color-swatch2, 3%);
-			}
-		}
-
-
-		
+		margin-right: 0;		
 
 		&:hover > .text {
 			color: @color-swatch5;
+			background-color: transparent;
+		}
+
+		&.selected > .text {
+			background-color: transparent;
+			color: @color-swatch6;
+			&:after {
+				border-color: @color-swatch6 transparent transparent transparent;
+			}
 		}
 
 
@@ -193,16 +183,21 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 	}
 
 	// ---- Open folder
-	ul li:hover ul {
+	ul li:hover ul, ul li.folder.selected ul {
 		min-width: 100%;
 		max-width: 300px;
 		z-index: 2000;
 		margin: 0 0 5px 0;
 		position: relative;
+		display: block;
+		background-color: @color-swatch1;
 
 		li {
 			background: darken(@color-swatch1, 6%);
 			margin-bottom: 1px;
+			display: block;
+			width: 100%;
+			float: none;
 		}
 	}
 
