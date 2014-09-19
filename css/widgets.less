@@ -945,11 +945,15 @@
 		font-weight: bold;
 		color: @color-swatch4;
 		font-family: @font-swatch4-font-family;
-		font-size: (@font-swatch5-font-size * 1.2);
-		line-height: (@font-swatch5-line-height * 1.2);
+		font-size: (@font-swatch4-font-size * 1);
+		line-height: (@font-swatch4-line-height * 1);
+		@media @tablet {
+			font-size: (@font-swatch5-font-size * 0.9);
+			line-height: (@font-swatch5-line-height * 0.9);
+		}
 		@media @mobile {
-			font-size: (@font-swatch5-font-size * 1.0);
-			line-height: (@font-swatch5-line-height * 1.0);
+			font-size: (@font-swatch5-font-size * 0.8);
+			line-height: (@font-swatch5-line-height * 0.8);
 		}
 	}
 	span.image-description {
@@ -960,6 +964,10 @@
 		line-height: @font-swatch5-line-height;
 		color: @color-swatch5;
 		letter-spacing: @font-swatch5-letter-spacing;
+		@media @tablet {
+			font-size: (@font-swatch5-font-size * 0.86);
+			line-height: (@font-swatch5-line-height * 0.86); 
+		}
 		@media @mobile {
 			font-size: (@font-swatch5-font-size * 0.8);
 			line-height: (@font-swatch5-line-height * 0.8);
