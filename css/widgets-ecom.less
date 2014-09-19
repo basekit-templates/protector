@@ -365,6 +365,7 @@
 				width: auto;
 				margin-right: 0;
 				float: none;
+				margin-bottom: 10%;
 			}
 			a {
 				display: block;
@@ -584,7 +585,7 @@
 
 			.ecom-product-preview-image-wrap {
 				height: 300px;
-				background-position: -1000%;
+				background-position: -10000%;
 
 				// Flex parent
 				display: -ms-flexbox;
@@ -605,6 +606,9 @@
 			    -webkit-align-items: center;
 			    -ms-flex-align: center;
 			    align-items: center;
+			    @media @mobile {
+			    	height: 160px;
+			    }
 				img {
 					margin: 0 auto;
 					max-height: 300px;
