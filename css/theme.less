@@ -8,7 +8,10 @@ body {
 	background-size: cover;
 }
 
-
+.widget.extendednavigation .bk-overlay {
+	left: 0;
+	width: auto;
+}
 
 
 
@@ -22,6 +25,23 @@ body {
 
 .site_layout {
 	position: relative;
+	// Flex parent
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+	min-height: 100%;
 }
 
 	.nav_section {
@@ -29,6 +49,7 @@ body {
 		position: absolute;
 		left: 130px;
 		top: 130px;
+		margin-bottom: 500px;
 		@media @bp-layout-1300 {
 			left: 80px;
 			top: 80px;
@@ -46,6 +67,7 @@ body {
 			top: 0;
 			padding: 30px;
 			padding-bottom: 0;
+			margin-bottom: 0;
 		}
 		@media @tablet {
 			padding: 15px;
@@ -54,6 +76,16 @@ body {
 	}
 
 	.content_section {
+		// Flex child
+		-webkit-box-flex: 1;
+	    -moz-box-flex: 1;
+	    -webkit-flex: 1 1 auto;
+	    -ms-flex: 1 1 auto;
+	    flex: 1 1 auto;
+
+	   
+
+		
 
 		.feature.widget,
 		.page_title {
@@ -71,12 +103,16 @@ body {
 				margin-left: 15px;
 			}
 		}
+
 		.page_content {
 			padding-left: 580px;
 			padding-right: 130px;
 			padding-top: 60px;
 			background: @color-swatch1;
 			padding-bottom: 100px;
+
+			
+
 			@media @bp-layout-1300 {
 				padding-right: 80px;
 				padding-left: 480px;
@@ -106,8 +142,6 @@ body {
 
 .nav_section {
 	@media @tablet {
-		
-
 		// Flex parent
 		display: -webkit-box;
 	    display: -moz-box;
@@ -148,10 +182,13 @@ body {
 		-webkit-order: 3;
 	    -ms-flex-order: 3;
 	    order: 3;
+	    padding: 20px;
 	}
 	@media @mobile {
 		padding-bottom: 12px;
 		padding-top: 24px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
@@ -169,6 +206,7 @@ body {
 	img {
 		max-width: 100%;
 		height: auto;
+		max-height: 150px;
 	}
 }
 
@@ -204,6 +242,10 @@ body {
 		    -ms-flex-order: 2;
 		    order: 2;
 		    display: none;
+		    padding: 15px 20px;
+		}
+		@media @mobile {
+			padding: 15px;
 		}
 		.profile.widget {
 			margin: 15px 0;
@@ -303,6 +345,10 @@ body {
 		
 	}
 
+	.content_wrapper {
+		max-width: 1400px;
+	}
+
 	.company {
 		width: 350px;
 		margin-bottom: 0;
@@ -365,6 +411,7 @@ body {
 
 		@media @bp-layout-1000 {
 			padding: 0 30px;
+			margin-right: 15px;
 		}
 
 		.widget.profile {
@@ -374,14 +421,18 @@ body {
 		.col {
 			width: 50%;
 			float: left;
+			padding-right: 10px;
+			&:last-of-type {
+				padding-right: 0;
+				padding-left: 10px;
+			}
 			@media @mobile {
 				float: none;
 				width: auto;
+				padding: 0;
 			}
 		}
 	}
-
-
 }
 
 // ================================================================================================
