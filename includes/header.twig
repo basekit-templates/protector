@@ -1,0 +1,22 @@
+
+	<div class="company">
+		{{widget('logo', 'w_logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('companyname', 'w_companyname', {"business": "profile", "align":"center"})|raw}}
+	</div>
+
+	{% if pages|length > 1 %}
+		{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+	{% endif %}
+
+	<div class="profile_widgets">
+		{{widget('profile', 'w_profile_1', { 'profileType':'phone' })|raw}}
+		{{widget('profile', 'w_profile_2', { 'profileType':'email' })|raw}}
+	</div>
+
+	<div class="profile_widgets">
+		{{widget('profile', 'w_profile_3', { 'profileType':'address' })|raw}}
+		{{widget('profile', 'w_profile_4', { 'profileType':'socialicons', "showTplWidget":"0" })|raw}}
+	</div>
+
+
+

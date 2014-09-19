@@ -1,0 +1,76 @@
+// =============================================================================================
+// TYPOGRAPHY
+
+// Headings
+
+h1 {
+	@media @tablet {
+		font-size: (@font-swatch1-font-size * 0.85);
+		line-height: (@font-swatch1-line-height * 0.85);
+	}
+	@media @mobile {
+		font-size: (@font-swatch1-font-size * 0.75);
+		line-height: (@font-swatch1-line-height * 0.75);
+	}
+}
+
+h2 {
+	@media @tablet {
+		font-size: (@font-swatch2-font-size * 0.9);
+		line-height: (@font-swatch2-line-height * 0.9);
+	}
+	@media @mobile {
+		font-size: (@font-swatch2-font-size * 0.8);
+		line-height: (@font-swatch2-line-height * 0.8);
+	}
+}
+
+h3 {
+	@media @tablet {
+		font-size: (@font-swatch3-font-size * 0.9);
+		line-height: (@font-swatch3-line-height * 0.9);
+	}
+	@media @mobile {
+		font-size: (@font-swatch3-font-size * 0.8);
+		line-height: (@font-swatch3-line-height * 0.8);
+	}
+}
+
+h4 {
+	font-size: (@font-swatch4-font-size * 0.8);
+	line-height: (@font-swatch4-line-height * 0.8);
+}
+
+h5 {
+	font-size: (@font-swatch4-font-size * 0.8);
+	line-height: (@font-swatch4-line-height * 0.8);
+	color: fade(@color-swatch4, 80%);
+
+}
+
+h6 {
+	font-size: (@font-swatch4-font-size * 0.8);
+	line-height: (@font-swatch4-line-height * 0.8);
+	color: fade(@color-swatch4, 70%);
+	font-style: normal;
+	font-variant: normal;
+}
+
+// Normal text
+
+p {
+	padding-bottom: 0.5em;
+}
+
+p, ul, ol, li, .p-font, time.blog-post-publish-date, pre, code, .bk-content-text span, .ecom-product-cattag  {
+	font-size: (@font-swatch5-font-size * 1);
+	line-height: (@font-swatch5-line-height * 1);
+	@media @tablet {
+		font-size: (@font-swatch5-font-size * 0.9);
+		line-height: (@font-swatch5-line-height * 0.9);
+	}
+	@media @mobile {
+		font-size: (@font-swatch5-font-size * 0.8);
+		line-height: (@font-swatch5-line-height * 0.8);
+	}
+}
