@@ -16,17 +16,19 @@
 		{% include basekit.headScript %}
 	</head>
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
-		<div class="site_layout">
-			<div class="nav_section">
-				{% include "includes/header.twig" %}
-			</div>
+		<div class="site_wrapper">
+			<div class="site_layout">
+				<div class="nav_section">
+					{% include "includes/header.twig" %}
+				</div>
 
-			<div class="content_section">
-				{% block content %}
-				{% endblock %}
+				<div class="content_section">
+					{% block content %}
+					{% endblock %}
+				</div>
 			</div>
+			{% include "includes/footer.twig" %}
 		</div>
-		{% include "includes/footer.twig" %}
 		{% include basekit.bodyScript %}
 
 		<script>

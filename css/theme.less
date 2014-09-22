@@ -9,6 +9,42 @@ body {
 
 	position: relative;
 	min-height: 100%;
+
+	 
+
+
+}
+
+.site_wrapper {
+	// Flex parent
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
 }
 
 .widget.extendednavigation .bk-overlay {
@@ -27,50 +63,28 @@ body {
 @tablet: ~"only screen and (max-width : 1000px)";
 
 .site_layout {
-	position: relative;
-	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
 	min-height: 100%;
-
 }
 
 	.nav_section {
 		width: 350px;
-		position: absolute;
-		left: 130px;
-		top: 130px;
-		// margin-bottom: 500px;
+		margin: 130px 0 0 130px;
+		float: left;
+		position: relative;
+
 		@media @bp-layout-1300 {
-			left: 80px;
-			top: 80px;
+			margin: 80px 0 0 80px;
 			width: 320px;
 		}
 		@media @bp-layout-1200 {
-			left: 40px;
-			top: 40px;
 			width: 320px;
+			margin: 40px 0 0 40px;
 		}
 		@media @bp-layout-1000 {
-			position: relative;
 			width: auto;
-			left: 0;
-			top: 0;
 			padding: 30px;
-			padding-bottom: 0;
-			margin-bottom: 0;
+			margin: 0;
+			float: none;
 		}
 		@media @tablet {
 			padding: 15px;
@@ -84,6 +98,8 @@ body {
 		-webkit-flex: 1 1 auto;
 		-ms-flex: 1 1 auto;
 		flex: 1 1 auto;
+
+
 	
 
 		.feature.widget,
@@ -294,7 +310,7 @@ body {
 
 // ================================================================================================
 .footer {
-
+	clear: both;
 	padding-left: 130px;
 	background: @color-swatch1;
 

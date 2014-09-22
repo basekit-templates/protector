@@ -58,7 +58,7 @@
 
 	// Open basket
 	.ecombasket-list-container {
-		.clearfix;
+		.c_clearfix;
 		ul {
 			li {
 				position: relative;
@@ -159,7 +159,7 @@
 
 .widget.ecomproductslist {
 	.block-widget;
-	.clearfix;
+	.c_clearfix;
 	background-color: transparent;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -178,6 +178,7 @@
 			
 
 			.productlist-display-form {
+				.c_clearfix;
 				background: lighten(@color-swatch1, 10%);
 				margin-bottom: (@w-spacing * 0.3);
 				box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.06);
@@ -472,7 +473,7 @@
 	.block-widget;
 	.w_vertical_spacing;
 	
-	.clearfix;
+	.c_clearfix;
 	ul.product-category-items {
 		margin: 0;
 		padding: 0;
@@ -561,8 +562,9 @@
 
 
 .widget.ecomproduct {
+	clear: none;
 	.block-widget;
-	.clearfix;
+	.c_clearfix;
 	border-bottom: 1px solid lighten(@color-swatch1, 10%);
 	@media @bp-product-compact {
 		border-bottom: none;
@@ -571,7 +573,7 @@
 	.ecom-product {
 		// Images
 		.ecom-product-images-container {
-			.clearfix;
+			.c_clearfix;
 			.w_vertical_spacing;
 			.w_horizontal_spacing;
 			background: lighten(@color-swatch1, 10%);
@@ -791,7 +793,7 @@
 	// Products
 	.ecom-featuredproducts-wrap {
 		
-		.clearfix;
+		.c_clearfix;
 
 		// 2 products versions, span across entire width
 		&.products-2 {

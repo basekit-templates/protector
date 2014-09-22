@@ -3,20 +3,22 @@
 @bp-wigets-compact: ~"only screen and (max-width : 960px)";
 @w-spacing: 30px;
 
+// Custom clearfix
+.c_clearfix {
+	overflow: hidden;
+	width: 100%;
+}
 
-
+// Removing float clearing because of .nav_section
 .bk-zone > .widget {
-	margin: 0;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	clear: both;
-	&:first-of-type {
-		@media @bp-wigets-compact {
-			padding-top: (@w-spacing * 0.4);
-		}
-		@media @mobile {
-			padding-top: (@w-spacing * 0.2);
-		}
+	&:after {
+		clear: none !important;
+	}
+
+	*:after, * {
+		clear: none !important;
 	}
 }
 
@@ -50,6 +52,7 @@
 
 // Vertical spacing for block widgets
 .block-widget {
+	.c_clearfix;
 	margin-top: (@w-spacing * 1);
 	margin-bottom: (@w-spacing * 1);
 }
@@ -131,7 +134,7 @@
 
 
 .widget.socialicons .icons {
-	.clearfix;
+	.c_clearfix;
 	span {
 		line-height: 0;
 		display: block;
@@ -572,7 +575,7 @@
 @twitterProfilePicSize: 46px;
 
 .widget.twitter {
-	.clearfix;
+	.c_clearfix;
 	.block-widget;
 
 	ul.twitter {
