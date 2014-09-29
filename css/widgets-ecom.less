@@ -193,37 +193,47 @@
 					text-align: left;
 					margin-bottom: 1em;
 					float: left;
-					margin-right: 2em;
-					@media @bp-product-detail-compact {
-						float: none;
+					margin-right: 2%;
+					width: 32%;
+					&:nth-child(3) {
+						margin-right: 0;
 					}
+					
 					@media @mobile {
 						display: block;
 						margin-bottom: 10px;
 						margin-right: 0;
 					}
-					@media @bp-layout-1200 {
+					@media @bp-layout-1300 {
+						width: 49%;
+						margin-right: 2%;
+						&:nth-child(2) {
+							margin-right: 0;
+						}
+					}
+
+					@media @bp-layout-650 {
+						width: auto;
 						float: none;
-						margin-right: 0;
+						margin-right: 0 !important;
 					}
 
 
 
 					label {
-						display: inline-block;
+						display: block;
 						font-size: (@font-swatch5-font-size * 0.8);
-						text-align: center;
+						text-align: left;
 						padding-right: 1em;
 					}
 					select {
-	                    @media @bp-layout-1200 {
-							display: block;
-							width: 100%;
-						}
+						display: block;
+						width: 100%;
+	                   
 	                }
 	                // Search form
 	                &.productlist-search {
-
+						width: 100%;
 	                	display: block;
 	                	clear: both !important;
 	                	text-align: center;
@@ -298,7 +308,10 @@
 						    flex: 1 1 auto;
 						    -webkit-align-self: auto;
 						    -ms-flex-item-align: auto;
-						    align-self: auto;	                		
+						    align-self: auto;	
+						    @media @mobile {
+						    	width: 100%;
+						    }	                		
 	                	}
 	                	button {
 	                		// Flex
@@ -314,7 +327,10 @@
 						    flex: 0 1 auto;
 						    -webkit-align-self: auto;
 						    -ms-flex-item-align: auto;
-						    align-self: auto;	                		
+						    align-self: auto;
+						    @media @mobile {
+						    	margin-top: 5px;
+						    }	                		
 	                	}
 	                }
 				}
@@ -542,7 +558,7 @@
 				span {
 					position: absolute;
 					right: 16px;
-					color: fade(@color-swatch1, 70%)
+					color: @font-swatch7-color;
 				}
 			}
 		}
@@ -589,6 +605,7 @@
 			.ecom-product-preview-image-wrap {
 				height: 300px;
 				background-position: -10000%;
+				background-size: 1px;
 
 				// Flex parent
 				display: -ms-flexbox;
