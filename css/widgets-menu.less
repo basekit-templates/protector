@@ -4,9 +4,9 @@
 	.menu-section-list {
 		text-align: center;
 		li {
-			margin: 0 0.5em 0;
+			margin: 0 0.5em 1em;
 		}
-	}	
+	}
 }
 
 // ======= Widget: Menu
@@ -30,7 +30,7 @@
 		position: relative;
 		background: lighten(@color-swatch1, 10%);
 		margin-bottom: 30px;
-		
+
 		.menu-name-background {
 			.menu-name {
 				font-family: @font-swatch8-font-family;
@@ -53,8 +53,8 @@
 		-webkit-column-count: 1;
 		text-align: center;
 	}
-	
-	
+
+
 	// MENU ITEM
 	.menu-item {
 		padding: 0;
@@ -79,7 +79,7 @@
 			margin-right: 0;
 		}
 
-		
+
 		// Title
 		.menu-item-name {
 			padding: 0.7em 0;
@@ -106,7 +106,7 @@
 			height: 220px;
 			background-position: center;
 			border: 12px solid lighten(@color-swatch1, 10%);
-				       
+
 			img {
 				display: none;
 			}
@@ -119,14 +119,14 @@
 				text-align: center;
 				padding-bottom: 0.5em;
 				display: inline-block;
-				
+
 			}
 		}
-	
+
 		// Description
 		.menu-item-description {
-			
-			
+
+
 		}
 		// Nutritions
 		.menu-item-nutritional-title {
@@ -134,13 +134,13 @@
 			font-family:  @font-swatch5-font-family;
 			line-height: 1.2;
 			color: lighten(@color-swatch1, 30%);
-			
+
 		}
 		.menu-item-nutritional-prop, .menu-section-item-dietary-props {
 			font-size: (@font-swatch5-font-size * 0.8);
 			font-family:  @font-swatch5-font-family;
 			line-height: 1.4;
-			
+
 		}
 		.menu-item-nutritional-prop {
 			margin-bottom: 0.5em;
@@ -172,7 +172,7 @@
 					color: @color-swatch7;
 				}
 			}
-		}	
+		}
 	}
 	// ---- Sub Section
 	.menu-subsection {
@@ -183,7 +183,7 @@
 			border: 7px solid lighten(@color-swatch1, 10%);
 			@media @mobile {
 				border-width: 3px;
-			}		
+			}
 			.menu-subsection-header {
 
 				.menu-subsection-name {
@@ -198,8 +198,8 @@
 					margin-bottom: 1em;
 
 					@media @mobile {
-						font-size: (@font-swatch2-font-size * 0.6);	
-						line-height: (@font-swatch2-font-size * 0.6);	
+						font-size: (@font-swatch2-font-size * 0.6);
+						line-height: (@font-swatch2-font-size * 0.6);
 					}
 				}
 				.menu-subsection-description {
@@ -227,13 +227,13 @@
 					}
 				}
 			}
-			
+
 			// Promoted sub section items
 			&.menu-subsection-promoted {
 				border: 7px solid @color-swatch7;
 				@media @mobile {
 					border: 3px solid @color-swatch7;
-				}	
+				}
 
 				.menu-subsection-header {
 					.menu-subsection-name {
@@ -254,7 +254,7 @@
 						.menu-item-price {
 							border-bottom-color: @color-swatch7;
 							.standard-price {
-								
+
 							}
 						}
 						// Description
@@ -272,9 +272,9 @@
 						.menu-item-nutritional-prop {
 						}
 					}
-				}		
+				}
 			}
-		
+
 			// Normal sub section items
 			.menu-items {
 				padding: 0;
@@ -304,7 +304,7 @@
 							line-height: (@font-swatch2-line-height * 0.7);
 						}
 					}
-				
+
 					// Price
 					.menu-item-price {
 						.standard-price {
@@ -312,7 +312,7 @@
 							position: relative;
 						}
 					}
-				
+
 					// Description
 					.menu-item-description {
 						margin-left: 0;
@@ -326,7 +326,7 @@
 						margin-left: 0;
 					}
 					.menu-item-nutritional-prop {
-						
+
 					}
 				}
 			}
