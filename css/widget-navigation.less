@@ -11,7 +11,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 
 // Nav
 .widget.extendednavigation {
-	margin-bottom: 12px;	
+	margin-bottom: 12px;
 
 	@media @tablet {
 		min-height: 48px;
@@ -56,7 +56,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 		}
 		& > ul.open {
 			@media @tablet {
-				
+
 				display: block;
 				background: fade(@color-swatch1, 92%);
 
@@ -85,11 +85,11 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 			border-bottom: none;
 			padding: 0;
 		}
-		
+
 		// Item Text
 		& > .text, a .text {
 			padding: 0.8em 30px;
-			color: @color-swatch6;
+			color: @font-swatch6-color;
 			display: block;
 			position: relative;
 
@@ -98,7 +98,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 			}
 
 			&:hover {
-				color: lighten(@color-swatch6, 12%);
+				color: lighten(@font-swatch6-color, 12%);
 				background: darken(@color-swatch2, 5%);
 			}
 		}
@@ -122,7 +122,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 			position: relative;
 			padding: 0;
 			color: @color-swatch6;
-		
+
 		}
 	}
 
@@ -133,7 +133,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 		-moz-transition: background-color 0.25s ease-in-out;
 		-o-transition: background-color 0.25s ease-in-out;
 		transition: background-color 0.25s ease-in-out;
-		margin-right: 0;		
+		margin-right: 0;
 
 		&:hover > .text {
 			color: @color-swatch5;
@@ -182,7 +182,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 		}
 
 		&:hover > .text:after {
-			border-color: @color-swatch5 transparent transparent transparent;	
+			border-color: @color-swatch5 transparent transparent transparent;
 		}
 	}
 
@@ -208,7 +208,7 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 
 
 	// ---- Collapsible nav
-	
+
 	// Trigger Icon: Hamburger
 	a.pull {
 		// Dessktop

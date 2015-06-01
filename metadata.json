@@ -2,7 +2,7 @@
 	"name":"Protector",
 	"thumbnail":"protector.png",
 	"templateType":"standard",
-	"pageTypes": ["home"], 
+	"pageTypes": ["home"],
 	"tags": {
 		"en": ["dark", "inverted", "security", "rescue", "protection", "guard"]
 	},
@@ -114,7 +114,7 @@
 			"font-size": "16px",
 			"font-weight": "400",
 			"line-height": "35px",
-			"color": "@color-swatch1",
+			"color": "@color-swatch3",
 			"color-hover": "@color-swatch1",
 			"background-color": "@color-swatch6",
 			"background-color-hover": "@color-swatch2",
