@@ -89,12 +89,12 @@ div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.exte
 		// Item Text
 		& > .text, a .text {
 			padding: 0.8em 30px;
-			color: @font-swatch6-color;
+			// color: @font-swatch6-color;
 			display: block;
 			position: relative;
 
 			@media @mobile {
-				font-size: (@font-swatch6-font-size * 0.8);
+				font-size: bkscale(@font-swatch6-font-size, 0.8);
 			}
 
 			&:hover {
