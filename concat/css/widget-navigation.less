@@ -1,0 +1,282 @@
+// Widget: Extended Navigation
+
+// Reset Editor aligning
+div.widget.extendednavigation .extendednavigation ul.align-right, div.widget.extendednavigation .extendednavigation ul.align-right,
+div.widget.extendednavigation .extendednavigation ul.align-left, div.widget.extendednavigation .extendednavigation ul.align-left {
+	float: none !important;
+}
+
+
+
+
+// Nav
+.widget.extendednavigation {
+	margin-bottom: 12px;
+
+	@media @tablet {
+		min-height: 48px;
+	}
+	@media @mobile {
+		min-height: 42px;
+	}
+
+	.extendednavigation {
+		font-size: 0;
+		@media @tablet {
+			// BS reset
+			padding-top: 0;
+		}
+
+		& > ul {
+			// Removes spaces between inline items
+			font-size: 0;
+
+			@media @tablet {
+				display: none;
+				-webkit-transition: 		all 0.25s ease;
+				-moz-transition: 			all 0.25s ease;
+				-o-transition: 				all 0.25s ease;
+				transition: 				all 0.25s ease;
+				z-index: 2000;
+				-webkit-transform: 			rotateX(90deg);
+				-moz-transform: 			rotateX(90deg);
+				-o-transform: 				rotateX(90deg);
+				-ms-transform: 				rotateX(90deg);
+				transform: 					rotateX(90deg);
+				-webkit-transform-origin: 	0% 0%;
+				-moz-transform-origin: 		0% 0%;
+				-o-transform-origin: 		0% 0%;
+				-ms-transform-origin: 		0% 0%;
+				transform-origin: 			0% 0%;
+				padding-top: 48px;
+			}
+			@media @mobile {
+				padding-top: 40px;
+			}
+		}
+		& > ul.open {
+			@media @tablet {
+
+				display: block;
+				background: fade(@color-swatch1, 92%);
+
+				-webkit-transform: rotateX(0deg);
+				-moz-transform: rotateX(0deg);
+				-o-transform: rotateX(0deg);
+				-ms-transform: rotateX(0deg);
+				transform: rotateX(0deg);
+			}
+		}
+		& > ul > li {
+			display: block;
+			margin-bottom: 1px;
+			background: @color-swatch2;
+		}
+	}
+
+
+	// ---- Menu Item
+	ul li, ul li.folder {
+		position: relative;
+		white-space: normal;
+
+		@media @tablet {
+			right: 0;
+			border-bottom: none;
+			padding: 0;
+		}
+
+		// Item Text
+		& > .text, a .text {
+			padding: 0.8em 30px;
+			color: @font-swatch6-color;
+			display: block;
+			position: relative;
+
+			@media @mobile {
+				font-size: (@font-swatch6-font-size * 0.8);
+			}
+
+			&:hover {
+				color: lighten(@font-swatch6-color, 12%);
+				background: darken(@color-swatch2, 5%);
+			}
+		}
+
+		&.selected > a > .text {
+			background: @color-swatch6;
+			color: darken(@color-swatch1, 10%);
+
+			&:after {
+				border-color: darken(@color-swatch1, 10%) transparent transparent transparent;
+			}
+
+			&:hover {
+				color: darken(@color-swatch1, 10%);
+				background: @color-swatch6;
+			}
+		}
+
+		// Link
+		a {
+			position: relative;
+			padding: 0;
+			color: @font-swatch6-color;
+
+		}
+	}
+
+
+	// ---- Folder item
+	ul li.folder {
+		-webkit-transition: background-color 0.25s ease-in-out;
+		-moz-transition: background-color 0.25s ease-in-out;
+		-o-transition: background-color 0.25s ease-in-out;
+		transition: background-color 0.25s ease-in-out;
+		margin-right: 0;
+
+		&:hover > .text {
+			color: @color-swatch5;
+			background-color: transparent;
+		}
+
+		&.selected > .text {
+			background-color: transparent;
+			color: @color-swatch6;
+			&:after {
+				border-color: @color-swatch6 transparent transparent transparent;
+			}
+		}
+
+
+
+		// Arrow Icon
+		&:after {
+			// Hiding BS icon
+			display: none;
+		}
+
+		ul li .text {
+			font-size: (@font-swatch6-font-size * 0.86);
+			padding: 0.6em 30px;
+			@media @mobile {
+				font-size: (@font-swatch6-font-size * 0.78);
+			}
+			&:before {
+				display: none;
+			}
+		}
+
+		// Custom Drop Down icon
+		& > .text:after {
+			display: inline-block;
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 7px 5.5px 0 5.5px;
+			border-color: @color-swatch6 transparent transparent transparent;
+			margin-left: 0.5em;
+			position: relative;
+			top: -3px;
+		}
+
+		&:hover > .text:after {
+			border-color: @color-swatch5 transparent transparent transparent;
+		}
+	}
+
+	// ---- Open folder
+	ul li:hover ul, ul li.folder.selected ul {
+		min-width: 100%;
+		max-width: 300px;
+		z-index: 2000;
+		margin: 0 0 5px 0;
+		position: relative;
+		display: block;
+		background-color: @color-swatch1;
+		padding: 0 !important;
+
+		li {
+			background: darken(@color-swatch1, 6%);
+			margin-bottom: 1px;
+			display: block;
+			width: 100%;
+			float: none;
+		}
+	}
+
+
+	// ---- Collapsible nav
+
+	// Trigger Icon: Hamburger
+	a.pull {
+		// Dessktop
+	    display: none;
+	    @media @tablet {
+	        display: block;
+	        width: 100%;
+	        height: 46px;
+			background: @color-swatch3;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			z-index: 2000;
+	        &:hover {
+	           cursor: pointer;
+	        }
+	        // Hamburger Bun and Meat
+	        &:after, &:before {
+	            content: '';
+	            position: absolute;
+	            width: 26px;
+	            height: 3px;
+	            background: @color-swatch5;
+	            top: 15px;
+	            left: 50%;
+	            margin: 0 0 0 -13px;
+	            box-shadow: 0 6px 0 @color-swatch5, 0 12px 0 @color-swatch5;
+	        }
+	        &:before {
+	        }
+        }
+        @media @mobile {
+        	height: 40px;
+        	&:after, &:before {
+	            top: 13px;
+	        }
+        }
+    }
+}
+
+// Trigger Icon: Cross
+.widget.extendednavigation {
+	ul.open + a.pull {
+		@media @tablet {
+    	 	// Cross lines
+    	 	background: @color-swatch2;
+    	 	&:after, &:before {
+    	 		  box-shadow: none;
+    	 		  margin: 5px 0 0 -13px;
+    	 	}
+    	 	// Cross Line 1
+    	 	&:after {
+	            -webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+    	 	}
+    	 	// Cross Line 2
+    	 	&:before {
+    	 		display: block;
+	            -webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+    	 	}
+    	}
+	}
+}
