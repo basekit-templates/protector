@@ -3,7 +3,9 @@
 {% block content %}
 <div class="pt-default">
 	<div class="page_title">
-		<h1><span>{{ page.title }}</span></h1>
+
+        {{widget('pagetitle', 'pagetitle', {})|raw}}
+
 	</div>
 	<div class="page_content">
 		<div class="zone-content clearfix">
