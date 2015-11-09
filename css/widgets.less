@@ -517,7 +517,8 @@
 
 
 // ======= Widget: ContactForm
-.contactform.widget {
+.contactform.widget,
+.fonectacontactform {
 	.block-widget;
 
 	fieldset {
@@ -535,6 +536,12 @@
 			margin-bottom: 0;
 		}
 	}
+
+	// Fonecta contact form
+	input[type="checkbox"] + label {
+		background: none;
+		padding-left: 10px;
+	}
 }
 
 // ======= Widget: Youtube
@@ -550,6 +557,10 @@
 	.block-widget;
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+.fonectamap {
+	margin-bottom: 20px;
 }
 
 // ======= Widget: Line
