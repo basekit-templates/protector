@@ -1,7 +1,9 @@
 <div class="footer">
 	
 	<div class="company">
-		{{widget('logo', 'wf_logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('image', 'footer-logo', {
+	  		'src': asset("/images/logo.png")
+		})|raw}}
 		{{widget('companyname', 'wf_companyname', {"business": "profile", "align":"center"})|raw}}
 	</div>
 	
