@@ -1,6 +1,7 @@
 {
 	"name":"Protector",
 	"thumbnail":"protector.png",
+        "screenshot":"protector-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes": ["home"],
 	"tags": {
