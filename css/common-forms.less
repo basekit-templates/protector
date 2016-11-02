@@ -4,6 +4,7 @@
 // Buttons
 .widget.feature .feature-bgimg .content button,
 .contactform button.btn,
+.advancedcontactform button,
 .widget.button button,
 .widget .btn,
 .widget.profile form button,
@@ -124,7 +125,8 @@
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
 .ecom-product-vartitle,
-.fonectacontactform label {
+.fonectacontactform label,
+.advancedcontactform label {
     font-family: @font-swatch4-font-family;
     font-size: (@font-swatch5-font-size * 0.8);
     font-weight: @font-swatch4-font-weight;
@@ -144,11 +146,21 @@
 	}
 }
 
+.label--email,
+.label--message,
+.label--single-line {
+	background: lighten(@color-swatch1, 10%);
+	padding: 0 30px;
+	margin: 20px 0 0 0;
+	margin-bottom: 0!important;
+}
+
 
 // Selects
 .widget.ecomproductslist .productlist-filter,
 .widget.ecomcheckout .delivery,
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation,
+.advancedcontactform 
 {
 	& select {
 		text-indent: 0.01px;
@@ -187,6 +199,10 @@
 			border-color: @color-swatch2;
 		}
 	}
+}
+
+.advancedcontactform__select {
+	margin-bottom: 20px!important;
 }
 
 // Hides *custom* dropdown arrow in Firefox 30 and above
