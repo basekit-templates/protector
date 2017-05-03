@@ -69,7 +69,7 @@ body {
 
 	.nav_section {
 		width: 350px;
-		margin: 130px 0 0 130px;
+		margin: 60px 0 0 130px;
 		float: left;
 		position: relative;
 
@@ -130,6 +130,7 @@ body {
 			background: @color-swatch1;
 			padding-bottom: 100px;
 			margin-top: 0;
+			margin-top: 444px;
 
 
 
@@ -144,6 +145,7 @@ body {
 			@media @bp-layout-1000 {
 				padding-left: 30px;
 				padding-top: 20px;
+				margin-top: 0;
 			}
 			@media @mobile {
 				padding-top: 15px;
@@ -462,13 +464,13 @@ body {
 
 // ================================================================================================
 .widget.feature {
-	display: block;
-	width: auto;
-	padding: 130px 0;
-
-	@media @bp-layout-1300 {
-		padding: 80px 0;
-	}
+	position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    top: 0;
+    max-width: 60%;
+    padding: 60px 0;
 
 	@media @bp-layout-1200 {
 		padding: 60px 0;
@@ -482,7 +484,7 @@ body {
 
 	.feature-bgimg .content, .feature-bgimg {
 		height: auto;
-		min-height: 400px;
+		min-height: 324px;
 		display: block;
 		@media @mobile {
 			min-height: 200px;
