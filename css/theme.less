@@ -120,6 +120,7 @@ body {
 				margin-left: 15px;
 				padding-top: 5px;
 				padding-bottom: 15px;
+				margin-right: 0;
 			}
 		}
 
@@ -144,8 +145,9 @@ body {
 				padding-left: 420px;
 			}
 			@media @bp-layout-1000 {
-				padding-left: 30px;
+				padding-left: 20px;
 				padding-top: 20px;
+				padding-right: 20px;
 				margin-top: 0;
 			}
 			@media @mobile {
@@ -480,6 +482,8 @@ body {
 	@media @bp-layout-1000 {
 		padding: 5px 0 15px;
 		position: relative;
+		width: initial;
+		max-width: initial;
 	}
 
 	@media @mobile {
@@ -508,11 +512,9 @@ body {
 		@media @bp-layout-1300 {
 			padding-left: 50px;
 		}
-		@media @tablet {
-			margin-right: 20%;
-		}
-		@media @mobile {
-			margin-right: 15px;
+		@media @bp-layout-1000 {
+			margin: 0;
+    		padding: 0;
 		}
 	}
 	h2 {
