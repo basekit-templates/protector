@@ -137,6 +137,7 @@ body {
 			@media @bp-layout-1300 {
 				padding-right: 80px;
 				padding-left: 480px;
+				margin-top: 404px;
 			}
 			@media @bp-layout-1200 {
 				padding-right: 40px;
@@ -473,13 +474,19 @@ body {
     padding: 60px 0;
 
 	@media @bp-layout-1200 {
-		padding: 60px 0;
+		padding: 40px 0;
 	}
 
 	@media @bp-layout-1000 {
-		padding: 20px 0 40px;
+		padding: 5px 0 15px;
+		position: relative;
 	}
 
+	@media @mobile {
+		margin-right: 0;
+    	padding-right: 16px;
+    	width: initial;
+	}
 
 
 	.feature-bgimg .content, .feature-bgimg {
