@@ -264,7 +264,6 @@ body {
 
 .nav_section {
 	.profile_widgets {
-		padding: 15px 30px;
 		background: @color-swatch2;
 		margin-bottom: 12px;
 		@media @tablet {
@@ -272,13 +271,15 @@ body {
 		    -ms-flex-order: 2;
 		    order: 2;
 		    display: none;
-		    padding: 15px 20px;
-		}
-		@media @mobile {
-			padding: 15px;
 		}
 		.profile.widget {
-			margin: 15px 0;
+			&:first-child {
+				padding: 30px 30px 15px 30px;
+			}
+
+			&:last-child {
+				padding: 15px 30px 30px 30px;
+			}
 		}
 	}
 
