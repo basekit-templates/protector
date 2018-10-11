@@ -5,7 +5,7 @@
 
 // Custom clearfix
 .c_clearfix {
-	// overflow: hidden;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -16,6 +16,10 @@
 	padding-bottom: 1px;
 	&:after {
 		clear: none !important;
+	}
+
+	*:after, * {	
+		clear: none !important;	
 	}
 }
 
@@ -947,7 +951,7 @@
 	.small-widget;
 	text-align: center;
 	a {
-		display: inline-block;
+		display: block;
 		&:hover {
 			text-decoration: none;
 		}
@@ -989,6 +993,14 @@
 			font-size: bkscale(@font-swatch5-font-size, 0.8);
 			line-height: bkscale(@font-swatch5-line-height, 0.8);
 		}
+	}
+}
+
+.widget.image {
+	.widget-align-right,
+	.widget-alight-center,
+	.widget-align-left {
+		float: none;
 	}
 }
 
