@@ -4,6 +4,7 @@
         "screenshot":"protector-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes": ["home"],
+    "versionTenCompatible": 1,
 	"tags": {
 		"en": ["dark", "inverted", "security", "rescue", "protection", "guard"]
 	},
