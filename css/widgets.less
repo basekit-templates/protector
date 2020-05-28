@@ -10,7 +10,7 @@
 }
 
 // Removing float clearing because of .nav_section
-.bk-zone > .widget {
+#page-zones__main > .widget {
 	.c_clearfix;
 	padding-top: 1px;
 	padding-bottom: 1px;
@@ -533,7 +533,8 @@
 		margin: 0;
 	}
 
-	label {
+	label,
+	.form-group:not(.contactform__form-group--terms) label {
 		background: lighten(@color-swatch1, 10%);
 	    padding: 0 30px;
 	}
@@ -622,7 +623,7 @@
 			}
 
 			// footer
-			a, time + span, time, span a {
+			a, time + span, time, span a, p a {
 				font-size: (@font-swatch5-font-size * 0.8);
 				font-family: @font-swatch5-font-family;
 				line-height: 1;
@@ -662,6 +663,7 @@
 					background: lighten(@color-swatch1, 10%);
 					display: block;
 					padding-left: 10px;
+					padding-right: 10px;
 					margin-left: (@twitterProfilePicSize);
 					margin-bottom: 15px;
 					@media @mobile {
@@ -669,11 +671,11 @@
 					}
 				}
 				p {
+					display: block;
 					font-family: @font-swatch5-font-family;
 					a {
 						font-family: @font-swatch5-font-family;
 						font-size: @font-swatch5-font-size;
-						color: @color-swatch6;
 						line-height: @font-swatch5-line-height;
 					}
 				}
@@ -1106,8 +1108,6 @@
 // ================================================================================================
 .widget.soundcloud {
 	.block-widget;
-
-
 }
 
 
