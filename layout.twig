@@ -1,21 +1,10 @@
 <!doctype html>
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en">
-<![endif]-->
-<!--[if IE 7]>
-	<html class="no-js ie7 oldie" lang="en">
-<![endif]-->
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
 	<head>
 		{% include "includes/head.twig" %}
 		{% include basekit.headScript %}
 	</head>
-	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+	<body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 		<div class="site_wrapper">
 			<div class="site_layout">
 				<div class="nav_section">
