@@ -10,7 +10,7 @@
 }
 
 // Removing float clearing because of .nav_section
-#page-zones__main > .widget {
+#page-zones__main > .widget:not([data-name="row"]) {
 	.c_clearfix;
 	padding-top: 1px;
 	padding-bottom: 1px;
@@ -1135,13 +1135,3 @@
 .widget.facebookcomments {
 	.block-widget;
 }
-
-
-
-
-
-
-
-
-
-

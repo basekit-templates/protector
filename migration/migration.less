@@ -16,7 +16,8 @@
     
     
     &.edit {
-        
+
+
         .nav_section {
             margin-left: 60px;
         
@@ -34,6 +35,48 @@
                 width: auto;
             }
         }
+
+
+        .footer {
+            padding-left: 60px;
+
+            @media @bp-layout-1400 {
+                padding-left: 20px;
+            }
+            
+            @media @bp-layout-1000 {
+                padding-left: 0;
+            }
+        }
+        
+        
+        .footer .company {
+            .flex(0 0 auto);
+            margin-right: 40px;
+  
+            @media @bp-layout-1400 {
+                margin-right: 0;
+                width: 300px;
+            }
+            
+            @media @bp-layout-1200 {
+                width: 270px;
+            }
+            
+            @media @bp-layout-1000 {
+                width: auto;
+            }
+        }
+        
+        
+        .footer .profile_widgets {
+            .flex(1 1 auto);
+            
+            @media @bp-layout-1000 {
+                margin-right: 0;
+            }
+        }
+        
         
         .content_section .feature.widget,
         .content_section .page_title,
@@ -57,15 +100,10 @@
             }
         }
 
-        .row-add-button {
-            @media @bp-layout-1000 {
-                margin: 0;
-            }
-        }
 
         .empty-zone,
         #page-zones__main:empty,
-        #page-zones__main > .widget {
+        #page-zones__main > .widget:not([data-name="row"]) {
             width: ~"calc(100% - 510px)";
             
             @media @bp-layout-1400 {
@@ -80,27 +118,36 @@
                 width: ~"calc(100% - 60px)";
             }
         }
-
-        #page-zones__main > [data-name="row"] {
-           @media @bp-layout-1000 {
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-            } 
-        }
-
-
-        #page-zones__main > .widget[data-name="row"] {
         
-            @media @bp-layout-1000 {
-                margin: 0;
+        
+        #page-zones__main [data-name="row"] .row:not(.row--width-no-padding) .row__container {
+            max-width: 1400px;
+            margin-left: 0;
+            padding-left: 40px;
+            width: ~"calc(100% - 60px)";
+            
+            @media @bp-layout-1400 {
+                padding-left: 20px;
+                padding-right: 20px;
                 width: 100%;
+            }
+            
+            @media @bp-layout-1000 {
+                padding-left: 30px;
+                padding-right: 30px;
             }
         }
 
 
         #page-zones__main > .widget:not([data-name="row"]) {
             min-height: 35px;
+        }
+
+
+        .row-add-button {
+            @media @bp-layout-1000 {
+                margin: 0;
+            }
         }
 
 
@@ -145,20 +192,6 @@
     }
 
 
-    #page-zones__main > [data-name="row"] {
-        padding-bottom: 0;
-        padding-top: 0;
-
-        @media only screen and (min-width : 900px) {
-            overflow: inherit;
-        }
-        
-        .widget {
-            overflow: inherit;
-        }
-    }
-
-
     [data-name="row"] .gallery li {
         margin: 0;
     }
@@ -170,7 +203,7 @@
 
 
     [data-name="row"] .contactform label {
-        background: none;
+        background: transparent;
         border-radius: 0;
         margin-left: 0;
     }
@@ -211,7 +244,7 @@
 
     .empty-zone,
     #page-zones__main:empty,
-    #page-zones__main > .widget {
+    #page-zones__main > .widget:not([data-name="row"]) {
         margin-right: auto;
         max-width: 1400px;
         width: ~"calc(100% - 710px)";
@@ -254,7 +287,7 @@
         }
 
         @media @bp-layout-1400 {
-            margin-left: 385px;
+            margin-left: 400px;
         }
         
         @media @bp-layout-1300 {
@@ -288,30 +321,87 @@
             width: auto;
         }
     }
+    
+    
+    #page-zones__main [data-name="row"] .row:not(.row--width-no-padding) .row__container {
+        max-width: 1400px;
+        margin-left: 0;
+        padding-left: 40px;
+        width: ~"calc(100% - 60px)";
+        
+        @media @bp-layout-1400 {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+        
+        @media @bp-layout-1000 {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    
+    .footer {
+        
+        @media @bp-layout-1700 {
+            padding-left: 65px;
+        }
+        
+        @media @bp-layout-1700 {
+            padding-left: 30px;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            padding-left: 0;
+        }
+    }
+    
+    
+    .footer .company {
+        
+        @media @bp-layout-1700 {
+            .flex(0 0 auto);
+            margin-right: 70px;
+        }
+
+        @media @bp-layout-1400 {
+            margin-right: 20px;
+            width: 350px;
+        }
+        
+        @media @bp-layout-1300 {
+            margin-right: 20px;
+            width: 295px;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            margin-right: 0;
+            width: auto;
+        }
+    }
+    
+    
+    .footer .profile_widgets {
+        @media only screen and (max-width: 1000px) {
+            margin-right: 0;
+        }
+    }
 
 
     // Move spacing to first widget in the main zone (not sections)
-    &.edit #page-zones__main-overlay + .widget,
-    #page-zones__main > .widget:first-child {
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
         margin-top: 60px;
         
         @media @bp-layout-1400 {
             margin-top: 30px;
         }
-    }
-
-
-    #page-zones__main > .widget[data-name="row"]:first-child {
-        @media @bp-layout-1000 {
-            margin-top: 0;
-        } 
-    }
-
-
-    #page-zones__main > .widget[data-name="row"]:first-child {
-       @media @bp-layout-1000 {
-            margin-top: 0;
-        } 
     }
 
 

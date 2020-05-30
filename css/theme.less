@@ -6,6 +6,40 @@ body {
 	min-height: 100%;
 }
 
+.site_wrapper {
+	position: relative;
+	
+	// Flex parent
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
 .widget.extendednavigation .bk-overlay {
 	left: 0;
 	width: auto;
@@ -14,6 +48,7 @@ body {
 
 
 @bp-layout-1700: ~"only screen and (max-width : 1700px)";
+@bp-layout-1400: ~"only screen and (max-width : 1400px)";
 @bp-layout-1300: ~"only screen and (max-width : 1300px)";
 @bp-layout-1200: ~"only screen and (max-width : 1200px)";
 @bp-layout-1100: ~"only screen and (max-width : 1100px)";
@@ -122,9 +157,6 @@ body {
 .pt-default {
 	.page_content {
 		margin-top: 0;
-	}
-	.page_title {
-		min-height: 374px;
 	}
 }
 
