@@ -11,16 +11,18 @@
 
 // Removing float clearing because of .nav_section
 #page-zones__main > .widget:not([data-name="row"]) {
-	.c_clearfix;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	&:after {
-		clear: none !important;
-	}
+	width: 100%;
+}
 
-	*:after, * {	
-		clear: none !important;	
-	}
+#page-zones__main > [data-name="responsivecolumns"] {
+    .flex-display;
+    .flex-wrap(wrap);
+}
+
+#page-zones__main > .widget.in-editing {
+	overflow: visible;
 }
 
 #page-zones__main > .widget.in-editing {
