@@ -581,6 +581,10 @@
 // ======= Widget: Line
 .widget.line {
 	background-color: transparent;
+	
+	&:after {
+		clear: none;
+	}
 	hr.line {
 		height: 7px;
 		background-color: fade(@color-swatch5, 20%);
